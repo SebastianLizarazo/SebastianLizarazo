@@ -5,15 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pagina principal</title>
+    <title>@yield('title','Sebastian Lizarazo')</title>
 </head>
 <body>
-    <div class="mb-3">
+    <div>
         <nav>
-            <a href="#">Sobre mi</a>
-            <a href="#">Mis proyectos</a>
-            <a href="#">Contactame</a>
+            <a href="{{ route('about') }}">Mas sobre mi</a>
+            <a href="{{-- route('contact') --}}">Contactame</a>
+            <a href="{{-- route('portfolio') --}}">Mi portafolio</a>
         </nav>
+
+        <main>@yield('contenido')</main>
     </div>
 
 </body>

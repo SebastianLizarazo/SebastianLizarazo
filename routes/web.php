@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/Hola/{nombre}', function ($nombre) {
-    return 'Hola '.$nombre;
+Route::get('/',function (){
+   return 'Bienvenidos';
 });
-Route::get('/home',function(){
-    return view('index');
-})->name('home');
+
+Route::view('/quien-soy','about')->name('about');
+
+Route::view('/home','home')->name('home');
